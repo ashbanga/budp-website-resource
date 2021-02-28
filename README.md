@@ -1,4 +1,4 @@
-# BUDP website prerequisite
+# BUDP website resource
 
 This repository contains compose files and associated configurations that are required to dockerize resources to run BUDP for local enviornment.
 
