@@ -1,0 +1,21 @@
+version: "3.8"
+
+services: 
+
+  mssql:
+    container_name: sql-server-db
+    image: ${SQL_BASE_IMAGE} 
+    ports: 
+      - ${SQL_PORT} 
+    environment: 
+        SA_PASSWORD: ${SA_PASSWORD}
+        ACCEPT_EULA: "Y"
+
+  solr:
+    container_name: solr
+    image: ${SOLR_BASE_IMAGE}
+    ports: 
+      - ${SOLR_PORT}
+    mem_limit: 1GB
+volumes:
+  data:
